@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ulamek", "Ulamek\Ulamek.csproj", "{4BAE796E-2C10-43B9-848B-3D91B12581B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlamekTests", "UlamekTests\UlamekTests.csproj", "{18974DC5-874D-47F6-ADE3-11D0EEA52A61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BAE796E-2C10-43B9-848B-3D91B12581B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BAE796E-2C10-43B9-848B-3D91B12581B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BAE796E-2C10-43B9-848B-3D91B12581B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BAE796E-2C10-43B9-848B-3D91B12581B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18974DC5-874D-47F6-ADE3-11D0EEA52A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18974DC5-874D-47F6-ADE3-11D0EEA52A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18974DC5-874D-47F6-ADE3-11D0EEA52A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18974DC5-874D-47F6-ADE3-11D0EEA52A61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53AD8AFA-D4C6-45CD-9B64-48700DF8A880}
+	EndGlobalSection
+EndGlobal
