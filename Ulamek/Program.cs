@@ -16,8 +16,8 @@ namespace lab7Ulamek
     /// </summary>
     public class Ulamek : IComparable<Ulamek>
     {
-        public int licznik { get; }
-        public int mianownik { get; }
+        public int Licznik { get; }
+        public int Mianownik { get; }
 
         public Ulamek(int inLicznik, int inMianownik)
         {
@@ -26,71 +26,71 @@ namespace lab7Ulamek
                 throw new DivideByZeroException("Mianownik nie może być 0");
             }
 
-            this.licznik = inLicznik;
-            this.mianownik = inMianownik;
+            this.Licznik = inLicznik;
+            this.Mianownik = inMianownik;
         }
 
         public override string ToString()
         {
-            return licznik.ToString() + "/" + mianownik.ToString();
+            return Licznik.ToString() + "/" + Mianownik.ToString();
         }
 
         public static Ulamek operator *(Ulamek u1, Ulamek u2)
         {
-            int licznik = u1.licznik * u2.licznik;
-            int mianownik = u1.mianownik * u2.mianownik;
+            int licznik = u1.Licznik * u2.Licznik;
+            int mianownik = u1.Mianownik * u2.Mianownik;
             return new Ulamek(licznik, mianownik);
         }
 
         public static Ulamek operator +(Ulamek u1, Ulamek u2)
         {
-            int licznik = u1.licznik * u2.mianownik + u2.licznik * u1.mianownik;
-            int mianownik = u1.mianownik * u2.mianownik;
+            int licznik = u1.Licznik * u2.Mianownik + u2.Licznik * u1.Mianownik;
+            int mianownik = u1.Mianownik * u2.Mianownik;
             return new Ulamek(licznik, mianownik);
         }
 
         public static Ulamek operator -(Ulamek u1, Ulamek u2)
         {
-            int licznik = u1.licznik * u2.mianownik - u2.licznik * u1.mianownik;
-            int mianownik = u1.mianownik * u2.mianownik;
+            int licznik = u1.Licznik * u2.Mianownik - u2.Licznik * u1.Mianownik;
+            int mianownik = u1.Mianownik * u2.Mianownik;
             return new Ulamek(licznik, mianownik);
         }
 
         public static Ulamek operator /(Ulamek u1, Ulamek u2)
         {
-            int licznik = u1.licznik * u2.mianownik;
-            int mianownik = u1.mianownik * u2.licznik;
+            int licznik = u1.Licznik * u2.Mianownik;
+            int mianownik = u1.Mianownik * u2.Licznik;
             return new Ulamek(licznik, mianownik);
         }
 
         public static bool operator >(Ulamek u1, Ulamek u2)
         {
-            return (u1.licznik * u2.mianownik) > (u2.licznik * u1.mianownik);
+            return (u1.Licznik * u2.Mianownik) > (u2.Licznik * u1.Mianownik);
         }
 
         public static bool operator >=(Ulamek u1, Ulamek u2)
         {
-            return (u1.licznik * u2.mianownik) >= (u2.licznik * u1.mianownik);
+            return (u1.Licznik * u2.Mianownik) >= (u2.Licznik * u1.Mianownik);
         }
 
         public static bool operator <(Ulamek u1, Ulamek u2)
         {
-            return (u1.licznik * u2.mianownik) < (u2.licznik * u1.mianownik);
+            return (u1.Licznik * u2.Mianownik) < (u2.Licznik * u1.Mianownik);
         }
 
         public static bool operator <=(Ulamek u1, Ulamek u2)
         {
-            return (u1.licznik * u2.mianownik) <= (u2.licznik * u1.mianownik);
+            return (u1.Licznik * u2.Mianownik) <= (u2.Licznik * u1.Mianownik);
         }
 
         public static bool operator ==(Ulamek u1, Ulamek u2)
         {
-            return (u1.licznik * u2.mianownik) == (u2.licznik * u1.mianownik);
+            return (u1.Licznik * u2.Mianownik) == (u2.Licznik * u1.Mianownik);
         }
 
         public static bool operator !=(Ulamek u1, Ulamek u2)
         {
-            return (u1.licznik * u2.mianownik) != (u2.licznik * u1.mianownik);
+            return (u1.Licznik * u2.Mianownik) != (u2.Licznik * u1.Mianownik);
         }
 
         public override bool Equals(object obj)
@@ -104,26 +104,26 @@ namespace lab7Ulamek
             {
                 return false;
             }
-            return (this.licznik * u.mianownik) == (u.licznik * this.mianownik);
+            return (this.Licznik * u.Mianownik) == (u.Licznik * this.Mianownik);
         }
 
         public override int GetHashCode()
         {
-            return this.licznik * this.mianownik;
+            return this.Licznik * this.Mianownik;
         }
 
         public static explicit operator double(Ulamek u)
         {
-            return (double)u.licznik / u.mianownik;
+            return (double)u.Licznik / u.Mianownik;
         }
 
         public int CompareTo(Ulamek other)
         {
-            if (this.licznik * other.mianownik > other.licznik * this.mianownik)
+            if (this.Licznik * other.Mianownik > other.Licznik * this.Mianownik)
             {
                 return 1;
             }
-            else if (this.licznik * other.mianownik < other.licznik * this.mianownik)
+            else if (this.Licznik * other.Mianownik < other.Licznik * this.Mianownik)
             {
                 return -1;
             }

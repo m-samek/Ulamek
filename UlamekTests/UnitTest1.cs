@@ -10,8 +10,8 @@ namespace UlamekTests
         public void Constructor_ValidInputs_ShouldCreateUlamek()
         {
             var ulamek = new Ulamek(1, 2);
-            Assert.Equal(1, ulamek.licznik);
-            Assert.Equal(2, ulamek.mianownik);
+            Assert.Equal(1, ulamek.Licznik);
+            Assert.Equal(2, ulamek.Mianownik);
         }
 
         [Fact]
