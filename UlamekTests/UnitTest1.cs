@@ -96,6 +96,50 @@ namespace UlamekTests
         }
 
         [Fact]
+        public void Equals_ShouldReturnTrueForEqualUlamki()
+        {
+            var ulamek1 = new Ulamek(1, 2);
+            var ulamek2 = new Ulamek(1, 2);
+            Assert.True(ulamek1.Equals(ulamek2));
+        }
+
+        [Fact]
+        public void Equals_ShouldReturnFalseForDifferentUlamki()
+        {
+            var ulamek1 = new Ulamek(1, 2);
+            var ulamek2 = new Ulamek(1, 3);
+            Assert.False(ulamek1.Equals(ulamek2));
+        }
+
+        [Fact]
+        public void GetHashCode_ShouldReturnSameHashCodeForEqualUlamki()
+        {
+            var ulamek1 = new Ulamek(1, 2);
+            var ulamek2 = new Ulamek(1, 2);
+            Assert.Equal(ulamek1.GetHashCode(), ulamek2.GetHashCode());
+        }
+
+        [Fact]
+        public void OperatorGreaterThanOrEqual_ShouldReturnTrueForGreaterOrEqualUlamki()
+        {
+            var ulamek1 = new Ulamek(1, 2);
+            var ulamek2 = new Ulamek(1, 4);
+            var ulamek3 = new Ulamek(1, 2);
+            Assert.True(ulamek1 >= ulamek2);
+            Assert.True(ulamek1 >= ulamek3);
+        }
+
+        [Fact]
+        public void OperatorLessThanOrEqual_ShouldReturnTrueForLessOrEqualUlamki()
+        {
+            var ulamek1 = new Ulamek(1, 4);
+            var ulamek2 = new Ulamek(1, 2);
+            var ulamek3 = new Ulamek(1, 4);
+            Assert.True(ulamek1 <= ulamek2);
+            Assert.True(ulamek1 <= ulamek3);
+        }
+
+        [Fact]
         public void ExplicitOperatorDouble_ShouldReturnCorrectResult()
         {
             var ulamek = new Ulamek(1, 2);
