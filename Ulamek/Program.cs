@@ -93,23 +93,19 @@ namespace lab7Ulamek
             return (u1.Licznik * u2.Mianownik) != (u2.Licznik * u1.Mianownik);
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            if (obj == null)
+            if (obj == null || GetType() != obj.GetType())
             {
                 return false;
             }
             Ulamek u = obj as Ulamek;
-            if (u == null)
-            {
-                return false;
-            }
             return (this.Licznik * u.Mianownik) == (u.Licznik * this.Mianownik);
         }
 
         public override int GetHashCode()
         {
-            return this.Licznik * this.Mianownik;
+            return HashCode.Combine(this.Licznik, this.Mianownik);
         }
 
         public static explicit operator double(Ulamek u)

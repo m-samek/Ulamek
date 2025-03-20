@@ -120,6 +120,32 @@ namespace UlamekTests
         }
 
         [Fact]
+        public void GetHashCode_ShouldWorkCorrectlyInDictionary()
+        {
+            var dict = new Dictionary<Ulamek, string>
+            {
+                { new Ulamek(1, 2), "Half" },
+                { new Ulamek(1, 3), "Third" }
+            };
+
+            Assert.Equal("Half", dict[new Ulamek(1, 2)]);
+            Assert.Equal("Third", dict[new Ulamek(1, 3)]);
+        }
+
+        [Fact]
+        public void GetHashCode_ShouldWorkCorrectlyInHashSet()
+        {
+            var set = new HashSet<Ulamek>
+            {
+                new Ulamek(1, 2),
+                new Ulamek(1, 3)
+            };
+
+            Assert.Contains(new Ulamek(1, 2), set);
+            Assert.Contains(new Ulamek(1, 3), set);
+        }
+
+        [Fact]
         public void OperatorGreaterThanOrEqual_ShouldReturnTrueForGreaterOrEqualUlamki()
         {
             var ulamek1 = new Ulamek(1, 2);
